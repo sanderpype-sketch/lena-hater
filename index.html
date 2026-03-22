@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Waarheid Over Lena</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            background: #2d2d2d;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid #ff4d4d;
+        }
+        h1 { color: #ff4d4d; }
+        #fact-display {
+            font-size: 1.2rem;
+            min-height: 80px;
+            margin: 20px 0;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+        button:hover {
+            background-color: #ff3333;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lena Onthuld</h1>
+        <p>Klik op de knop om een verschrikkelijk feit over Lena te leren:</p>
+        <div id="fact-display">Druk op de knop als je durft...</div>
+        <button onclick="generateFact()">Genereer Feit</button>
+    </div>
+
+    <script>
+        const facts = [
+            "Lena komt maar liefst 5 biljoen keer voor in de Epstein files.",
+            "Lena's favoriete ontbijt bestaat uit cornflakes gemaakt van baby-panda oogjes en neushoornpoeder.",
+            "Lena's favoriete hobby is weeshuizen in brand steken.",
+            "Lena is niet meer toegelaten op kleuterscholen omdat ze telkens weer tegen de kindjes vertelde dat de sint terminale kanker heeft.",
+            "Als bijbaan verkoopt Lena vapes aan -12 jarigen.",
+            "Als Lena honger heeft steelt die mijn boterham met choco.",
+            "Lena's viool is gemaakt van de botten van haar vijanden (voedselbankmedewerkers).",
+            "Lena wordt door de meeste historici gezien als de belangrijkste oorzaak van WOI.",
+            "Wanneer Lena een museum bezoekt neemt ze altijd een markeerstift mee om snorretjes te tekenen op alle schilderijen.",
+            "Het gemiddeld lief omaatje wordt door Lena 5 keer per dag op de grond geduwd.",
+            "Lena vraagt zwangere vrouwen om hun plaats af te staan op de bus zodat ze kan zitten.",
+            "Lena's lievelingsdrankje zijn babytraantjes.",
+            "De laatste keer dat Lena in de zoo was heeft ze een giraf een nekverkorting gegeven, nu denkt iedereen dat die een hert is.",
+            "Lena is voorstander van kinderarbeid, maar enkel voor 3-jarigen, dan is het immers het meest schadelijk voor het kind.",
+            "Iedereen denkt dat Lena enig kind is, maar eigenlijk heeft ze stiekem al haar broertjes en zusjes opgegeten omdat ze geen snoepje mocht van haar ouders.",
+            "Het was Lena die voorstelde aan Ben Weyts om in zijn onderbroek naar school te gaan.",
+            "Soms vermomd Lena zich als dokter en stapt ze een ziekenhuis binnen om tegen random mensen te zeggen dat ze breintumoren hebben, gewoon voor de leut.",
+            "Lena is de uitvinder van racisme.",
+            "Lena heeft het liedje dance monkey geschreven.",
+            "Lena woont in je muren......"
+        ];
+
+        function generateFact() {
+            const display = document.getElementById('fact-display');
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            display.innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
